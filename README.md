@@ -20,7 +20,7 @@ Este proyecto está pensado como **práctica básica de pentesting y networking*
 
 ## Descripción general 🚀
 
-DebrScan realiza un escaneo de puertos TCP básico utilizando la librería estándar socket de Python.
+DebrScan realiza un **escaneo de puertos TCP básico** utilizando la librería estándar socket de Python.
 
 El script intenta conectarse al puerto especificado:
 
@@ -34,19 +34,24 @@ Este tipo de comprobación es una de las **primeras fases de un proceso de pente
 ## Tecnologías utilizadas ⚙️
 
 - **Python 3** 🐍  
-- **Selenium WebDriver** para automatizar el navegador  
-- **Pyperclip** para copiar y pegar texto con emojis y caracteres especiales  
-- **Google Chrome** y **ChromeDriver** como navegador y driver de automatización
+- **socket** (librería estándar de Python para comunicaciones de red TCP/IP)
+
+No se utilizan librerías externas, lo que hace el proyecto ligero y fácil de entender.
 
 ---
 
 ## Funcionamiento del script 🧠
 
 ### 1. Entrada de datos por consola
-Solicita al usuario:  
-- Nombre del contacto  
-- Mensaje a enviar  
-- Hora de envío en formato HH:MM
+El script solicita al usuario:
+
+- El **host** a escanear (IP o nombre de dominio)
+- El **puerto** a comprobar (entero)
+
+<pre>
+  Introduce el host a escanear:
+  Introduce el puerto a escanear:
+</pre>
 
 ### 2. Cálculo del tiempo de espera
 - Convierte la hora introducida en un objeto de fecha y hora del día actual  
