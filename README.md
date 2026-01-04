@@ -14,6 +14,7 @@ Este proyecto está pensado como **práctica básica de pentesting y networking*
 - [Funcionamiento del script 🧠](https://github.com/y9bkh/AutoWass/blob/main/README.md#funcionamiento-del-script-)  
 - [Instalación y uso 🛠️](https://github.com/y9bkh/AutoWass/blob/main/README.md#instalaci%C3%B3n-y-uso-%EF%B8%8F)
 - [Ejemplo de ejecución 💡](https://github.com/y9bkh/AutoWass/blob/main/README.md#ejemplo-de-ejecuci%C3%B3n-)
+- [Aviso legal ⚠️](https://github.com/y9bkh/AutoWass/blob/main/README.md#aviso-legal-)
 - [Licencia 📖](https://github.com/y9bkh/AutoWass/blob/main/README.md#licencia-)  
 
 ---
@@ -54,67 +55,71 @@ El script solicita al usuario:
 </pre>
 
 ### 2. Creación del socket TCP
-- El script intenta conectarse al host y puerto indicados
-- Si la conexión es exitosa → devuelve `True`
-- Si ocurre un error → devuelve False
+- Se crea un socket TCP usando AF_INET y SOCK_STREAM
+- Se establece un **timeout de 10 segundos** para evitar bloqueos
 
 ### 3. Intento de conexión
-- Muestra en consola el número de segundos que va a esperar  
-- Utiliza `time.sleep(segundos)` para pausar la ejecución hasta el momento exacto del envío
+- El script intenta conectarse al host y puerto indicados
+- Si la conexión es exitosa → devuelve `True`
+- Si ocurre un error → devuelve `False`
 
-### 4. Automatización de WhatsApp Web con Selenium
-- Abre Chrome con la opción `detach=True` para mantener el navegador abierto  
-- Carga [WhatsApp Web](https://web.whatsapp.com) y pide al usuario que escanee el código QR  
-- Busca la barra de búsqueda de chats usando XPath y pega el nombre del contacto con Pyperclip y CTRL + V  
-- Entra en el chat del contacto y localiza la caja de escritura  
-- Pega el mensaje con Pyperclip y CTRL + V y finalmente lo envía con ENTER
+Este comportamiento simula el funcionamiento interno de un port scanner básico.
+
+### 4. Interpretación del resultado
+Según el resultado de la conexión:
+
+- Muestra en consola si el puerto está Abierto o Cerrado
 
 ---
 
 ## Instalación y uso 🛠️
 ### 1. Clonar el repositorio:
-<pre>git clone https://github.com/y9bkh/AutoWass.git
-cd AutoWass</pre>
+<pre>
+  git clone https://github.com/tu_usuario/DebrScan.git
+  cd DebrScan
+</pre>
 
-### 2. Instalar dependencias necesarias:
-<pre>pip install selenium pyperclip</pre>
+### 2. Requisitos
+- Python 3 instalado
 
-### 3. Configurar ChromeDriver:
-* Descarga la versión de ChromeDriver compatible con tu versión de Chrome.​
+(No se requieren dependencias adicionales)
 
-* Añádelo al PATH del sistema o colócalo en el mismo directorio que el script.
-
-### 4. Ejecutar el script:
-<pre>python autowass.py</pre>
-
-### 5. Seguir los pasos en consola:
-* Introducir el nombre del contacto exactamente como aparece en WhatsApp.
-
-* Escribir el mensaje que se desea enviar (se permiten emojis y acentos).
-
-* Indicar la hora de envío en formato HH:MM (24h).
-
-* Escanear el QR de WhatsApp Web cuando se abra el navegador y pulsar ENTER cuando esté listo.
+### 3. Ejecutar el script:
+<pre>
+  python debrscan.py
+</pre>
 
 ---
 
 ## Ejemplo de ejecución 💡
 Entrada del usuario en consola:
-<pre>Introduce el nombre del contacto: Ana Pérez
-Introduce el mensaje: ¡Feliz cumpleaños! 🎉🎂
-Introduce la hora que desea enviar el mensaje (HH:MM): 09:45
+<pre>
+  Introduce el host a escanear: 127.0.0.1
+  Introduce el puerto a escanear: 80
 </pre>
 
 Salida esperada en consola:
-<pre>Esperando 3600 segundos hasta enviar el mensaje...
-Escanea el QR y pulsa ENTER cuando WhatsApp Web esté listo...
+<pre>
+  Puerto 80 Abierto
+</pre>
+Si el puerto no está accesible:
+<pre>
+  Puerto 80 Cerrado
 </pre>
 
-En segundo plano, el programa:
+---
 
-* Espera el tiempo calculado hasta las 09:45.
+## Aviso legal ⚠️
+Este proyecto se ha desarrollado **exclusivamente con fines educativos.**
 
-* Abre WhatsApp Web, selecciona el chat de Ana Pérez y envía el mensaje automáticamente.
+⚠️ **No utilices esta herramienta para escanear sistemas, redes o servicios sin autorización explícita.**
+El uso indebido de herramientas de escaneo puede ser ilegal.
+
+Utilízala únicamente en:
+
+- Entornos de laboratorio
+- Máquinas propias
+- Sistemas de pruebas con permiso
 
 ---
 
