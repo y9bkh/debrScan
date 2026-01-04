@@ -14,7 +14,7 @@ Este proyecto está pensado como **práctica básica de pentesting y networking*
 - [Funcionamiento del script 🧠](https://github.com/y9bkh/debrScan/blob/main/README.md#funcionamiento-del-script-)  
 - [Instalación y uso 🛠️](https://github.com/y9bkh/debrScan/blob/main/README.md#instalaci%C3%B3n-y-uso-%EF%B8%8F)
 - [Ejemplo de ejecución 💡](https://github.com/y9bkh/debrScan/blob/main/README.md#ejemplo-de-ejecuci%C3%B3n-)
-- [Aviso legal ⚠️](https://github.com/y9bkh/debrScan/blob/main/README.md#aviso-legal-)
+- [Aviso legal ⚠️](https://github.com/y9bkh/debrScan/blob/main/README.md#aviso-legal-%EF%B8%8F)
 - [Licencia 📖](https://github.com/y9bkh/debrScan/blob/main/README.md#licencia-)  
 
 ---
