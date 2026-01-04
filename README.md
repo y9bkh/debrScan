@@ -53,12 +53,13 @@ El script solicita al usuario:
   Introduce el puerto a escanear:
 </pre>
 
-### 2. Cálculo del tiempo de espera
-- Convierte la hora introducida en un objeto de fecha y hora del día actual  
-- Si la hora ya ha pasado, suma un día y programa el envío para el día siguiente  
-- Devuelve los segundos totales a esperar usando `datetime` y `timedelta`
+### 2. Creación del socket TCP
+```md
+- El script intenta conectarse al host y puerto indicados
+- Si la conexión es exitosa → devuelve `True`
+- Si ocurre un error → devuelve ``False``
 
-### 3. Espera hasta la hora programada
+### 3. Intento de conexión
 - Muestra en consola el número de segundos que va a esperar  
 - Utiliza `time.sleep(segundos)` para pausar la ejecución hasta el momento exacto del envío
 
