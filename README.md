@@ -54,10 +54,9 @@ El script solicita al usuario:
 </pre>
 
 ### 2. Creación del socket TCP
-```md
 - El script intenta conectarse al host y puerto indicados
 - Si la conexión es exitosa → devuelve `True`
-- Si ocurre un error → devuelve `False`
+- Si ocurre un error → devuelve False
 
 ### 3. Intento de conexión
 - Muestra en consola el número de segundos que va a esperar  
