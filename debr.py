@@ -3,7 +3,11 @@ import socket
 # Función que recibe el host y el puerto TCP y devolverá un boolean
 def debrScan(host, port):
     cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Creamos un socket TCP IPv4 
+<<<<<<< HEAD
     cliente.settimeout(3)
+=======
+    cliente.settimeout(10)
+>>>>>>> 85822a222c6e26c26985369eba5493325ae597fc
 
     # Determina si el puerto esta abierto o cerrado mediante la conexión
     try:
@@ -14,6 +18,7 @@ def debrScan(host, port):
     finally:
         cliente.close()
 
+<<<<<<< HEAD
 # Solicita al usuario el host y define la lista de puertos comunes
 host = input("Introduce el host a escanear: ")
 while not host or host==" ":
@@ -49,4 +54,9 @@ for p in port:
         print(f"[+] Puerto {p} Abierto")
     else:
         print(f"[-] Puerto {p} Cerrado")
+=======
+# Solicita al usuario el host y puerto a analizar
+host = input("Introduce el host a escanear: ")
+port = int(input("Introduce el puerto a escanear: "))
+>>>>>>> 85822a222c6e26c26985369eba5493325ae597fc
 
